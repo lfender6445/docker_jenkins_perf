@@ -1,4 +1,4 @@
-jenkins setup with taurus and ssl siege driver
+jenkins setup with taurus and siege driver configured for ssl
 
 # install and run
 
@@ -15,5 +15,7 @@ container exec -u root -it <your_container_id> bash
 you can now access bzt within a jenkins shell
 
 ```
-bzt taurus.yml # this file lives at /tmp/docker_jenkins_perf/taurus.yml
+bzt taurus.yml # this file lives at ./build/taurus.yml
 ```
+
+where you can add or edit test scenarios
