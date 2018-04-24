@@ -6,4 +6,4 @@ services:
       - 8081:8080
       - 5000:5000
     volumes:
-      - /tmp/docker_jenkins_perf:/var/jenkins_home
+      - ./build/var/jenkins_home

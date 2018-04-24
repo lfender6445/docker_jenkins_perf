@@ -25,3 +25,5 @@ RUN wget http://download.joedog.org/siege/siege-4.0.4.tar.gz && \
 WORKDIR siege-4.0.4
 
 RUN ./configure --with-ssl && make && make install
+
+COPY taurus.yml /var/jenkins_home/
