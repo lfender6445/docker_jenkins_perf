@@ -1,0 +1,13 @@
+settings:
+  default-executor: siege
+
+execution:
+- concurrency: 100
+  ramp-up: 1m
+  hold-for: 5m
+  scenario: quick-test
+
+scenarios:
+  quick-test:
+    requests:
+    - https://www.qa.rent.com/
