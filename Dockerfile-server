@@ -1,4 +1,4 @@
-FROM jenkins
+FROM python:2-jessie
 
 USER root
 
@@ -26,4 +26,11 @@ WORKDIR siege-4.0.4
 
 RUN ./configure --with-ssl && make && make install
 
-COPY taurus.yml /var/jenkins_home/
+WORKDIR /
+
+RUN mkdir -p /source/server
+
+COPY taurus.yml /source/server/
+COPY server/server.py /source/server/
+
+CMD ["python", "-m", "SimpleHTTPServer", "8000"]
