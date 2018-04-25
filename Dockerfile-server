@@ -19,14 +19,13 @@ WORKDIR openssl-1.0.2g
 
 RUN ./config && make depend && make install
 
-WORKDIR /opt
-
 RUN wget http://download.joedog.org/siege/siege-4.0.4.tar.gz && \
     tar zxvf siege-4.0.4.tar.gz
 
 WORKDIR siege-4.0.4
 
-RUN ./configure --with-ssl && make && make install
+RUN ./configure --with-ssl=/opt/openssl-1.0.2g --prefix=/usr/local && \
+    make && make install
 
 WORKDIR /
 
