@@ -1,0 +1,28 @@
+{
+ "execution": [
+  {
+   "executor": "siege",
+   "concurrency": 100,
+   "hold-for": "1m",
+   "scenario": "external_urls"
+  }
+ ],
+ "reporting": [
+  {
+   "module": "final-stats",
+   "summary": true,
+   "percentiles": true,
+   "failed-labels": true,
+   "test-duration": true,
+   "dump-csv": "dump2.csv"
+  }
+ ],
+ "scenarios": {
+  "external_urls": {
+   "think-time": "15s",
+   "requests": [
+    "https://www.qa.rent.com/georgia/atlanta-apartments"
+   ]
+  }
+ }
+}

@@ -10,10 +10,10 @@ reporting:
   percentiles: true  # display average times and percentiles
   failed-labels: true  # provides list of sample labels with failures
   test-duration: true  # provides test duration
-  dump-csv: dump2.csv
+  dump-csv: dump.csv
 
 scenarios:
   external_urls:
     think-time: 15s
     requests:
-    - 'https://www.qa.rent.com/georgia/atlanta-apartments'
+    - 'https://www.qa.rent.com'

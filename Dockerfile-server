@@ -1,4 +1,6 @@
-FROM python:2-jessie
+FROM python:3
+
+EXPOSE 8000
 
 USER root
 
@@ -30,7 +32,6 @@ WORKDIR /
 
 RUN mkdir -p /source/server
 
-COPY taurus.yml /source/server/
-COPY server/server.py /source/server/
+COPY ./server/server.py /source/server
 
-CMD ["python", "-m", "SimpleHTTPServer", "8000"]
+CMD ["python", "/source/server/server.py"]

@@ -1,0 +1,10 @@
+execution:
+- executor: siege
+  concurrency: 100
+  iterations: 5
+  scenario: simplest
+
+scenarios:
+  simplest:
+    requests:
+    - http://blazedemo.com/

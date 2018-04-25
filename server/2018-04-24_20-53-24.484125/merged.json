@@ -1,0 +1,26 @@
+{
+ "execution": [
+  {
+   "executor": "siege",
+   "concurrency": 100,
+   "hold-for": "1m",
+   "scenario": "external_urls"
+  },
+  {
+   "module": "final-stats",
+   "summary": true,
+   "percentiles": true,
+   "failed-labels": false,
+   "test-duration": true,
+   "dump-csv": "dump.csv"
+  }
+ ],
+ "scenarios": {
+  "external_urls": {
+   "think-time": "15s",
+   "requests": [
+    "https://www.qa.rent.com"
+   ]
+  }
+ }
+}

@@ -1,0 +1,38 @@
+** SIEGE 4.0.4
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+[[1;33merror[0m] Failed to make an SSL connection: 5
+
+Lifting the server siege...
+Transactions:		         775 hits
+Availability:		       95.09 %
+Elapsed time:		       59.59 secs
+Data transferred:	       19.55 MB
+Response time:		        0.38 secs
+Transaction rate:	       13.01 trans/sec
+Throughput:		        0.33 MB/sec
+Concurrency:		        4.96
+Successful transactions:         775
+Failed transactions:	          40
+Longest transaction:	        0.71
+Shortest transaction:	        0.31
+ 

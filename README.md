@@ -29,3 +29,9 @@ where you can add or edit test scenarios
 docker image build -t jenkins -f Dockerfile-jenkins .
 docker image build -t server -f Dockerfile-server .
 ```
+
+## resources
+
+https://github.com/Blazemeter/taurus/blob/master/site/dat/docs/Siege.md
+
+https://github.com/Blazemeter/taurus/blob/master/bzt/modules/siege.py

@@ -1,0 +1,11 @@
+---
+execution:
+- concurrency: 100
+  executor: siege
+  iterations: 5
+  scenario: simplest
+scenarios:
+  simplest:
+    requests:
+    - https://www.qa.rent.com/
+

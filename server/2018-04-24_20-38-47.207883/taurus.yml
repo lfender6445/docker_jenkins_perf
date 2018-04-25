@@ -1,0 +1,11 @@
+execution:
+- executor: siege
+  concurrency: 100
+  hold-for: 5m
+  scenario: external_urls
+
+scenarios:
+  external_urls:
+    think-time: 15s
+    requests:
+    - 'https://www.qa.rent.com'

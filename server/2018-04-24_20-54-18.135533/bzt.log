@@ -1,0 +1,133 @@
+[2018-04-24 20:54:18,086 INFO root] Taurus CLI Tool v1.11.0
+[2018-04-24 20:54:18,086 DEBUG root] Command-line options: {'log': '/tmp/bzt_h4tw3ylr.log', 'option': None, 'quiet': None, 'verbose': None, 'no_system_configs': None, 'aliases': []}
+[2018-04-24 20:54:18,087 DEBUG root] Python: CPython 3.6.5
+[2018-04-24 20:54:18,087 DEBUG root] OS: uname_result(system='Linux', node='624d78e8868f', release='4.9.87-linuxkit-aufs', version='#1 SMP Wed Mar 14 15:12:16 UTC 2018', machine='x86_64', processor='')
+[2018-04-24 20:54:18,087 INFO root] Starting with configs: ['taurus.yml']
+[2018-04-24 20:54:18,087 DEBUG root] Adding personal config: /root/.bzt-rc
+[2018-04-24 20:54:18,087 INFO root] No personal config found, creating one at /root/.bzt-rc
+[2018-04-24 20:54:18,088 INFO Engine] Configuring...
+[2018-04-24 20:54:18,088 DEBUG Engine] No machine configs dir: /etc/bzt.d
+[2018-04-24 20:54:18,088 DEBUG Engine] Base configs list: ['/usr/local/lib/python3.6/site-packages/bzt/resources/base-config.yml']
+[2018-04-24 20:54:18,088 DEBUG Engine.Configuration] Configs: ['/usr/local/lib/python3.6/site-packages/bzt/resources/base-config.yml']
+[2018-04-24 20:54:18,088 DEBUG Engine.Configuration] Reading /usr/local/lib/python3.6/site-packages/bzt/resources/base-config.yml as YAML
+[2018-04-24 20:54:18,112 DEBUG Engine] User configs list: ['/root/.bzt-rc', 'taurus.yml']
+[2018-04-24 20:54:18,112 DEBUG Engine.Configuration] Configs: ['/root/.bzt-rc', 'taurus.yml']
+[2018-04-24 20:54:18,112 DEBUG Engine.Configuration] Reading /root/.bzt-rc as YAML
+[2018-04-24 20:54:18,121 DEBUG Engine.Configuration] Reading taurus.yml as YAML
+[2018-04-24 20:54:18,124 DEBUG Engine.Configuration] Configs: ['/root/.bzt-rc', 'taurus.yml']
+[2018-04-24 20:54:18,124 DEBUG Engine.Configuration] Reading /root/.bzt-rc as YAML
+[2018-04-24 20:54:18,130 DEBUG Engine.Configuration] Reading taurus.yml as YAML
+[2018-04-24 20:54:18,133 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.11.0&installID=linux-242ac110002
+[2018-04-24 20:54:18,135 INFO Engine] Artifacts dir: /source/server/2018-04-24_20-54-18.135533
+[2018-04-24 20:54:18,139 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/effective
+[2018-04-24 20:54:18,141 DEBUG Engine.Configuration] Dumping YAML config into /source/server/2018-04-24_20-54-18.135533/effective.yml
+[2018-04-24 20:54:18,160 DEBUG Engine.Configuration] Dumping JSON config into /source/server/2018-04-24_20-54-18.135533/effective.json
+[2018-04-24 20:54:18,161 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/merged.yml
+[2018-04-24 20:54:18,162 DEBUG Engine.Configuration] Dumping YAML config into /source/server/2018-04-24_20-54-18.135533/merged.yml
+[2018-04-24 20:54:18,164 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/merged.json
+[2018-04-24 20:54:18,165 DEBUG Engine.Configuration] Dumping JSON config into /source/server/2018-04-24_20-54-18.135533/merged.json
+[2018-04-24 20:54:18,165 DEBUG Engine] Add existing artifact (move=False): taurus.yml
+[2018-04-24 20:54:18,166 DEBUG Engine] Copying taurus.yml to /source/server/2018-04-24_20-54-18.135533/taurus.yml
+[2018-04-24 20:54:18,170 DEBUG root] Closing log handler: /tmp/bzt_h4tw3ylr.log
+[2018-04-24 20:54:18,173 DEBUG root] Switched writing logs to /source/server/2018-04-24_20-54-18.135533/bzt.log
+[2018-04-24 20:54:18,173 DEBUG root] Linting config
+[2018-04-24 20:54:18,175 INFO Engine] Preparing...
+[2018-04-24 20:54:18,176 DEBUG Engine] Module config: consolidator defaultdict(None, {'class': 'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2018-04-24 20:54:18,176 DEBUG root] Importing module: bzt.modules.aggregator
+[2018-04-24 20:54:18,298 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/usr/local/lib/python3.6/site-packages/bzt/modules/aggregator.py'>
+[2018-04-24 20:54:18,299 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2018-04-24 20:54:18,299 DEBUG Engine] Module config: monitoring defaultdict(None, {'class': 'bzt.modules.monitoring.Monitoring'})
+[2018-04-24 20:54:18,300 DEBUG root] Importing module: bzt.modules.monitoring
+[2018-04-24 20:54:18,301 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/usr/local/lib/python3.6/site-packages/bzt/modules/monitoring.py'>
+[2018-04-24 20:54:18,302 DEBUG Engine] Module config: local defaultdict(None, {'class': 'bzt.modules.provisioning.Local'})
+[2018-04-24 20:54:18,302 DEBUG root] Importing module: bzt.modules.provisioning
+[2018-04-24 20:54:18,303 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/usr/local/lib/python3.6/site-packages/bzt/modules/provisioning.py'>
+[2018-04-24 20:54:18,303 DEBUG Engine] Module config: siege defaultdict(None, {'class': 'bzt.modules.siege.SiegeExecutor'})
+[2018-04-24 20:54:18,303 DEBUG root] Importing module: bzt.modules.siege
+[2018-04-24 20:54:18,304 DEBUG root] Loading class: 'SiegeExecutor' from <module 'bzt.modules.siege' from '/usr/local/lib/python3.6/site-packages/bzt/modules/siege.py'>
+[2018-04-24 20:54:18,304 DEBUG Engine.local] Preparing executor: siege/140251795799288
+[2018-04-24 20:54:18,305 DEBUG Engine.siege.Siege] Check Siege: siege
+[2018-04-24 20:54:18,305 DEBUG bzt.utils] Executing shell: ['siege', '-h'] at .
+[2018-04-24 20:54:18,311 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/siegerc
+[2018-04-24 20:54:18,314 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/siege.url
+[2018-04-24 20:54:18,316 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/siege.out
+[2018-04-24 20:54:18,317 DEBUG Engine] New artifact filename: /source/server/2018-04-24_20-54-18.135533/siege.err
+[2018-04-24 20:54:18,319 DEBUG Engine] Module config: final-stats defaultdict(None, {'class': 'bzt.modules.reporting.FinalStatus'})
+[2018-04-24 20:54:18,319 DEBUG root] Importing module: bzt.modules.reporting
+[2018-04-24 20:54:18,356 DEBUG easyprocess] version=0.2.3
+[2018-04-24 20:54:18,357 DEBUG pyvirtualdisplay] version=0.2.1
+[2018-04-24 20:54:18,359 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/usr/local/lib/python3.6/site-packages/bzt/modules/reporting.py'>
+[2018-04-24 20:54:18,360 DEBUG Engine] Module config: console defaultdict(None, {'class': 'bzt.modules.console.ConsoleStatusReporter'})
+[2018-04-24 20:54:18,360 DEBUG root] Importing module: bzt.modules.console
+[2018-04-24 20:54:18,361 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/usr/local/lib/python3.6/site-packages/bzt/modules/console.py'>
+[2018-04-24 20:54:18,365 DEBUG Engine.Configuration] Dumping YAML config into /source/server/2018-04-24_20-54-18.135533/effective.yml
+[2018-04-24 20:54:18,386 DEBUG Engine.Configuration] Dumping JSON config into /source/server/2018-04-24_20-54-18.135533/effective.json
+[2018-04-24 20:54:18,387 INFO Engine] Starting...
+[2018-04-24 20:54:18,388 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x7f8ef64ffac8>
+[2018-04-24 20:54:18,388 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x7f8ef64b7940>
+[2018-04-24 20:54:18,389 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x7f8eea423898>
+[2018-04-24 20:54:18,389 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x7f8eea411dd8>
+[2018-04-24 20:54:18,389 INFO Engine.console] Waiting for results...
+[2018-04-24 20:54:18,390 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x7f8eea4130f0>
+[2018-04-24 20:54:18,390 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x7f8ef64b7160>
+[2018-04-24 20:54:18,391 DEBUG Engine.local] Delay setup for siege/external_urls: 0(start-at) + 0(delay) = 0
+[2018-04-24 20:54:18,393 DEBUG Engine.Configuration] Dumping YAML config into /source/server/2018-04-24_20-54-18.135533/effective.yml
+[2018-04-24 20:54:18,411 DEBUG Engine.Configuration] Dumping JSON config into /source/server/2018-04-24_20-54-18.135533/effective.json
+[2018-04-24 20:54:18,413 DEBUG root] Leveling down log file verbosity, use -v option to have DEBUG messages enabled
+[2018-04-24 20:54:18,413 DEBUG root] Leveled up log file verbosity
+[2018-04-24 20:54:18,414 DEBUG bzt.utils] Executing shell: ['siege', '--time', '60S', '--delay', '15.0', '--concurrent', '100', '--file', '/source/server/2018-04-24_20-54-18.135533/siege.url'] at /source/server
+[2018-04-24 20:54:18,421 DEBUG root] Leveling down log file verbosity, use -v option to have DEBUG messages enabled
+[2018-04-24 20:55:19,185 INFO Engine.console] Current: 100 vu	11 succ	0 fail	0.350 avg rt	/	Cumulative: 0.382 avg rt, 0% failures
+[2018-04-24 20:55:19,213 WARNING Engine] Please wait for graceful shutdown...
+[2018-04-24 20:55:19,214 DEBUG root] Leveled up log file verbosity
+[2018-04-24 20:55:19,214 INFO Engine] Shutting down...
+[2018-04-24 20:55:19,215 DEBUG Engine] Current stop reason: None
+[2018-04-24 20:55:19,216 DEBUG Engine.local] Shutdown siege/external_urls
+[2018-04-24 20:55:19,218 DEBUG Engine.Configuration] Dumping YAML config into /source/server/2018-04-24_20-54-18.135533/effective.yml
+[2018-04-24 20:55:19,238 DEBUG Engine.Configuration] Dumping JSON config into /source/server/2018-04-24_20-54-18.135533/effective.json
+[2018-04-24 20:55:19,239 INFO Engine] Post-processing...
+[2018-04-24 20:55:19,240 DEBUG Engine.local] Post-process siege/external_urls
+[2018-04-24 20:55:19,240 DEBUG Engine.siege.DataLogReader.FileReader] Reading: /source/server/2018-04-24_20-54-18.135533/siege.out
+[2018-04-24 20:55:19,241 DEBUG Engine.siege.DataLogReader] Buffer len: 2
+[2018-04-24 20:55:19,241 DEBUG Engine.siege.DataLogReader] Aggregating: 1524603316
+[2018-04-24 20:55:19,245 DEBUG Engine.siege.DataLogReader] Aggregating: 1524603317
+[2018-04-24 20:55:19,250 DEBUG Engine.consolidator] Consolidator buffer[4]: dict_keys([1524603314, 1524603315, 1524603316, 1524603317])
+[2018-04-24 20:55:19,250 DEBUG Engine.consolidator] Merging into 1524603314
+[2018-04-24 20:55:19,250 DEBUG Engine.consolidator] Merging 1524603314
+[2018-04-24 20:55:19,260 DEBUG Engine.consolidator] Processed datapoint: 1524603314/None
+[2018-04-24 20:55:19,260 DEBUG Engine.consolidator] Merging into 1524603315
+[2018-04-24 20:55:19,261 DEBUG Engine.consolidator] Merging 1524603315
+[2018-04-24 20:55:19,270 DEBUG Engine.consolidator] Processed datapoint: 1524603315/None
+[2018-04-24 20:55:19,271 DEBUG Engine.consolidator] Merging into 1524603316
+[2018-04-24 20:55:19,271 DEBUG Engine.consolidator] Merging 1524603316
+[2018-04-24 20:55:19,279 DEBUG Engine.consolidator] Processed datapoint: 1524603316/None
+[2018-04-24 20:55:19,280 DEBUG Engine.consolidator] Merging into 1524603317
+[2018-04-24 20:55:19,280 DEBUG Engine.consolidator] Merging 1524603317
+[2018-04-24 20:55:19,289 DEBUG Engine.consolidator] Processed datapoint: 1524603317/None
+[2018-04-24 20:55:19,290 INFO Engine.final-stats] Test duration: 0:01:01
+[2018-04-24 20:55:19,291 INFO Engine.final-stats] Samples count: 775, 0.00% failures
+[2018-04-24 20:55:19,292 INFO Engine.final-stats] Average times: total 0.382, latency 0.000, connect 0.000
+[2018-04-24 20:55:19,292 INFO Engine.final-stats] Percentile 0.0%: 0.310
+[2018-04-24 20:55:19,293 INFO Engine.final-stats] Percentile 50.0%: 0.350
+[2018-04-24 20:55:19,293 INFO Engine.final-stats] Percentile 90.0%: 0.520
+[2018-04-24 20:55:19,294 INFO Engine.final-stats] Percentile 95.0%: 0.540
+[2018-04-24 20:55:19,295 INFO Engine.final-stats] Percentile 99.0%: 0.580
+[2018-04-24 20:55:19,295 INFO Engine.final-stats] Percentile 99.9%: 0.630
+[2018-04-24 20:55:19,296 INFO Engine.final-stats] Percentile 100.0%: 0.710
+[2018-04-24 20:55:19,296 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2018-04-24 20:55:19,297 INFO Engine.final-stats] Test duration: 0:01:01
+[2018-04-24 20:55:19,297 INFO Engine.final-stats] Samples count: 775, 0.00% failures
+[2018-04-24 20:55:19,298 INFO Engine.final-stats] Average times: total 0.382, latency 0.000, connect 0.000
+[2018-04-24 20:55:19,298 INFO Engine.final-stats] Percentile 0.0%: 0.310
+[2018-04-24 20:55:19,299 INFO Engine.final-stats] Percentile 50.0%: 0.350
+[2018-04-24 20:55:19,299 INFO Engine.final-stats] Percentile 90.0%: 0.520
+[2018-04-24 20:55:19,300 INFO Engine.final-stats] Percentile 95.0%: 0.540
+[2018-04-24 20:55:19,300 INFO Engine.final-stats] Percentile 99.0%: 0.580
+[2018-04-24 20:55:19,301 INFO Engine.final-stats] Percentile 99.9%: 0.630
+[2018-04-24 20:55:19,302 INFO Engine.final-stats] Percentile 100.0%: 0.710
+[2018-04-24 20:55:19,302 INFO Engine.final-stats] Dumping final status as CSV: dump.csv
+[2018-04-24 20:55:19,307 DEBUG Engine.Configuration] Dumping YAML config into /source/server/2018-04-24_20-54-18.135533/effective.yml
+[2018-04-24 20:55:19,328 DEBUG Engine.Configuration] Dumping JSON config into /source/server/2018-04-24_20-54-18.135533/effective.json
+[2018-04-24 20:55:19,329 INFO root] Artifacts dir: /source/server/2018-04-24_20-54-18.135533
+[2018-04-24 20:55:19,329 INFO root] Done performing with code: 0
+[2018-04-24 20:55:19,330 DEBUG root] Closing log handler: /source/server/2018-04-24_20-54-18.135533/bzt.log
