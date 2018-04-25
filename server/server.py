@@ -3,6 +3,7 @@ import os
 import logging
 import json
 import subprocess
+import os
 
 class S(BaseHTTPRequestHandler):
 
@@ -38,6 +39,8 @@ class S(BaseHTTPRequestHandler):
         self.wfile.write("POST request for {}".format(self.path).encode('utf-8'))
 
 def run(server_class=HTTPServer, handler_class=S, port=8000):
+    path='/source/server'
+    os.chdir(path)
     logging.basicConfig(level=logging.INFO)
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
