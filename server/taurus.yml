@@ -1,7 +1,7 @@
 execution:
 - executor: siege
   concurrency: 100
-  hold-for: 1m
+  hold-for: 20s
   scenario: external_urls
 
 reporting:
@@ -10,7 +10,8 @@ reporting:
   percentiles: true  # display average times and percentiles
   failed-labels: true  # provides list of sample labels with failures
   test-duration: true  # provides test duration
-  dump-csv: dump2.csv
+  # dump-csv: 'dump2.csv'
+  dump-xml: 'dump.xml'
 
 scenarios:
   external_urls:

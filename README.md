@@ -32,6 +32,8 @@ docker image build -t server -f Dockerfile-server .
 
 ## resources
 
+https://jenkinsci.github.io/performance-plugin/Reporting.html
+
 https://github.com/Blazemeter/taurus/blob/master/site/dat/docs/Siege.md
 
 https://github.com/Blazemeter/taurus/blob/master/bzt/modules/siege.py
