@@ -31,7 +31,7 @@ WORKDIR /
 
 RUN mkdir -p /source/server
 
-COPY taurus.yml /source/server/
+COPY ./server/taurus.yml /source/server/
 COPY ./server/server.py /source/server
 
 CMD ["python", "/source/server/server.py"]
