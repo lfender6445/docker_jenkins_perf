@@ -102,18 +102,17 @@ until [[ $POLL_WAIT -ge $MAX_WAIT || -v DONE ]]; do
             echo "Done, after $POLL_WAIT seconds of max $MAX_WAIT" 1>&2
         fi
         DONE=true
-    fi
-
-    if [ -v VERBOSE ]; then
+    elif [ -v VERBOSE ]; then
         echo "Not done, after $POLL_WAIT seconds of max $MAX_WAIT" 1>&2
+        sleep $WAIT_INTERVAL
+        let POLL_WAIT+=$WAIT_INTERVAL
     fi
-    sleep $WAIT_INTERVAL
-    let POLL_WAIT+=$WAIT_INTERVAL
-
-    echo "POLL_WAIT=$POLL_WAIT GET_RESULT=$GET_RESULT DONE=$DONE WAIT_INTERVAL=$WAIT_INTERVAL"
 done
 
 echo "STATS=$STATS"
+RESULTS_PATH="$JENKINS_HOME/workspace/performance/performance-test.xml"
+echo "RESULTS_PATH=$RESULTS_PATH"
+echo "$STATS" > $RESULTS_PATH
 
 exit 0
 

@@ -33,7 +33,7 @@ class S(BaseHTTPRequestHandler):
 
     def run_test(self):
         self._set_response('application/json')
-        timestamp = {'xml_route': '/source/server/logs/' + str(time.time()) + '.xml', 'csv_route': 'log/' + str(time.time()) + '.csv'}
+        timestamp = {'xml_route': 'logs/' + str(time.time()) + '.xml', 'csv_route': 'logs/' + str(time.time()) + '.csv'}
         json_timestamp = json.dumps(timestamp)
         self.wfile.write(json_timestamp.encode('utf-8'))
         subprocess.run("bzt taurus.yml", shell=True)
