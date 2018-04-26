@@ -1,5 +1,6 @@
 jenkins/*
 !jenkins/.keep
+!jenkins/perf-stats.sh
 .#*
 .swp
 server/*.csv

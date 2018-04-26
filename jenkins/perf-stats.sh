@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 WAIT_INTERVAL=15
 MAX_WAIT=300
 RESULTS_FORMAT=xml
@@ -58,6 +58,7 @@ done
 START_PATH="run_test"
 START_URL="$PERF_PROTO$PERF_HOST:$PERF_PORT/$START_PATH"
 START_CMD="wget -O - --quiet $START_URL"
+
 if [ -v VERBOSE ]; then
     echo "Requesting run via \"$START_CMD\"" 1>&2
 fi
@@ -72,7 +73,7 @@ fi
 # fake response for now...
 #RESPONSE='{"xml_route": "log/1524690082.0967674.xml", "csv_route": "log/1524690082.096786.csv"}'
 XML_PATH=`echo "$RESPONSE" | jq .xml_route 2>/dev/null | sed -e s/\"//g 2>/dev/null`
-CSV_PATH=`echo "$RESPONSE" | jq .csv_route 2>/dev/null | sed -e s/\"//g 2>/dev/null` 
+CSV_PATH=`echo "$RESPONSE" | jq .csv_route 2>/dev/null | sed -e s/\"//g 2>/dev/null`
 if [[ -z "$XML_PATH" ||  -z "$CSV_PATH" ]]; then
     echo "$0: could not retrieve response paths from results" 1>&2
     echo "$0: command returned:" 1>&2
@@ -96,6 +97,7 @@ fi
 POLL_WAIT=0
 until [[ $POLL_WAIT -ge $MAX_WAIT || -v DONE ]]; do
     STATS=`$POLL_CMD`
+    echo 'here i am'
     GET_RESULT=$?
     if [ $GET_RESULT -eq 0 ]; then
         if [ -v VERBOSE ]; then
@@ -115,4 +117,3 @@ echo "RESULTS_PATH=$RESULTS_PATH"
 echo "$STATS" > $RESULTS_PATH
 
 exit 0
-
