@@ -29,7 +29,8 @@ RUN ./configure --with-ssl=/opt/openssl-1.0.2g --prefix=/usr/local && \
 
 WORKDIR /
 
-RUN mkdir -p /source/server
+RUN mkdir -p /source/server && \
+    mkdir -p /source/server/logs/
 
 COPY ./server/taurus.yml /source/server/
 COPY ./server/server.py /source/server

@@ -2,3 +2,5 @@ jenkins/*
 !jenkins/.keep
 .#*
 server/*.csv
+server/*.xml
+server/logs/*

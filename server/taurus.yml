@@ -10,8 +10,8 @@ reporting:
   percentiles: true  # display average times and percentiles
   failed-labels: true  # provides list of sample labels with failures
   test-duration: true  # provides test duration
-  # dump-csv: 'dump2.csv'
-  dump-xml: 'dump.xml'
+  dump-csv: 'results.csv'
+  dump-xml: 'results.xml'
 
 scenarios:
   external_urls:
