@@ -1,6 +1,8 @@
 jenkins/*
 !jenkins/.keep
 .#*
+.swp
 server/*.csv
 server/*.xml
 server/logs/*
+!server/logs/.keep
